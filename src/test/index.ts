@@ -1,1 +1,2 @@
-require('./demo')
+// require('./demo-simple')
+// require('./demo-custom')
