@@ -3,7 +3,6 @@ import { _ } from 'coa-helper'
 import { Socket } from 'net'
 
 export class CoaClient {
-
   socket: Socket
   clientId: string
   deviceId: string
@@ -12,7 +11,7 @@ export class CoaClient {
   isWorking: boolean
   live: number
 
-  constructor (socket: Socket, clientId: string, type: string) {
+  constructor(socket: Socket, clientId: string, type: string) {
     this.socket = socket
     this.type = type
     this.clientId = clientId
@@ -23,29 +22,22 @@ export class CoaClient {
   }
 
   // 连接
-  async onConnect () {
-  }
+  async onConnect() {}
 
   // 连接关闭
-  async onClose () {
-  }
+  async onClose() {}
 
   // 设备上线
-  async onOnline (deviceId: string) {
-  }
+  async onOnline(deviceId: string) {}
 
   // 设备下线
-  async onOffline (deviceId: string) {
-  }
+  async onOffline(deviceId: string) {}
 
   // 接收到数据
-  async onData (raw: Buffer) {
-
-  }
+  async onData(raw: Buffer) {}
 
   // 设置设备状态
-  async setDevice ({ deviceId }: { deviceId: string }) {
-
+  async setDevice({ deviceId }: { deviceId: string }) {
     // 记录上次的设备ID
     const lastDeviceId = this.deviceId + ''
 
