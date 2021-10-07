@@ -8,7 +8,7 @@ export class CoaClientPool<T extends CoaClient> {
   protected clients: { [id: string]: T } = {}
   protected increment = 10001
 
-  constructor(className: string = 'CoaClient') {
+  constructor(className = 'CoaClient') {
     this.className = className
   }
 

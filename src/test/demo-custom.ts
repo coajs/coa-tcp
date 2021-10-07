@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-floating-promises */
 import { Socket } from 'net'
 import { CoaClient, CoaClientPool, CoaTcp } from '..'

@@ -22,19 +22,32 @@ export class CoaClient {
   }
 
   // 连接
-  async onConnect() {}
+  async onConnect() {
+    // on connect
+  }
 
   // 连接关闭
-  async onClose() {}
+  async onClose() {
+    // on close
+  }
 
   // 设备上线
-  async onOnline(deviceId: string) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async onOnline(deviceId: string) {
+    // on online
+  }
 
   // 设备下线
-  async onOffline(deviceId: string) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async onOffline(deviceId: string) {
+    // on offline
+  }
 
   // 接收到数据
-  async onData(raw: Buffer) {}
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  async onData(raw: Buffer) {
+    // on data
+  }
 
   // 设置设备状态
   async setDevice({ deviceId }: { deviceId: string }) {
