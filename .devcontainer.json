@@ -2,11 +2,13 @@
 // https://github.com/microsoft/vscode-dev-containers/tree/main/containers/javascript-node
 {
   "name": "coajs",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node",
+  "image": "ghcr.io/coajs/javascript-node",
+  "mounts": ["source=container-share-cache,target=/usr/local/share/.cache"],
   "extensions": [
     "mutantdino.resourcemonitor",
+    "github.vscode-pull-request-github",
+    "eamodio.gitlens",
     "esbenp.prettier-vscode",
-    "dbaeumer.vscode-eslint",
-    "eamodio.gitlens"
+    "dbaeumer.vscode-eslint"
   ]
 }
