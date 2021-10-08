@@ -14,7 +14,11 @@ export class CoaClientPool<T extends CoaClient> {
 
   // 生成新的客户端
   newClient(socket: Socket): T {
-    return new CoaClient(socket, `client-${++this.increment}`, this.className) as T
+    return new CoaClient(
+      socket,
+      `client-${++this.increment}`,
+      this.className
+    ) as T
   }
 
   // 连接
@@ -50,7 +54,11 @@ export class CoaClientPool<T extends CoaClient> {
     return _.map(this.clients, (v) => {
       const deviceId = v.deviceId
       const clientId = v.clientId
-      const process = v.isWorking ? 'working' : v.isOnline ? 'online' : 'offline'
+      const process = v.isWorking
+        ? 'working'
+        : v.isOnline
+        ? 'online'
+        : 'offline'
       return { deviceId, clientId, process }
     })
   }

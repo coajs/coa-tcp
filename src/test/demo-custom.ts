@@ -27,7 +27,11 @@ class CustomClient extends CoaClient {
 class CustomClientPool extends CoaClientPool<CustomClient> {
   // 生成一个自定义的客户端
   newClient(socket: Socket) {
-    return new CustomClient(socket, `custom-id-${++this.increment}`, 'CustomClient')
+    return new CustomClient(
+      socket,
+      `custom-id-${++this.increment}`,
+      'CustomClient'
+    )
   }
 }
 

@@ -19,7 +19,7 @@
     "dev": "tsc -w",
     "build": "rm -rf dist && tsc && cp package.json *.md dist && rm -rf dist/test",
     "lint": "eslint .",
-    "prettier": "prettier -w .",
+    "format": "prettier -w .",
     "test": "NODE_PATH=run node dist/test",
     "sync": "curl -X PUT 'https://npm.taobao.org/sync/coa-tcp?sync_upstream=true'"
   },
